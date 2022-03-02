@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.servo.apptendance.views.FancyButtonBK
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="@dimen/len_8"
+        android:paddingBottom="@dimen/len_8"
+        android:paddingLeft="@dimen/len_14"
+        android:paddingRight="@dimen/len_14"
+        app:fb_borderColor="@color/colorBlueNormal"
+        app:fb_borderWidth="@dimen/len_1"
+        app:fb_radius="@dimen/len_20"
+        app:fb_defaultColor="@color/trans"
+        app:fb_focusColor="@color/colorBlueClickButton"
+        app:fb_textColor="@color/colorBlueNormal"
+        app:fb_text="@string/fingerprint_module"
+        app:fb_iconPosition="left"
+        app:fb_iconResource="@drawable/ic_fingerprint_blue"
+        app:fb_iconPaddingLeft="0dp"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#2B2B2C</color>
+    <color name="colorPrimaryForWhite">#1e2b9c</color>
+    <color name="colorPrimaryDark">@color/colorPrimaryDarkWhatsapp</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorRedError">#ff1800</color>
+    <color name="colorGreenSuccess">#1ed402</color>
+    <color name="colorGreenButtonCheck">#085700</color>
+    <color name="colorBlueNormal">#28912A</color>
+    <color name="colorBlueClickButton">#1B5512</color>
+    <color name="colorBlueTitreListePresence">#08426b</color>
+    <color name="colorListeVide">#888888</color>
+    <color name="colorIconItem">#b7b7b7</color>
+    <color name="colorVioletInitialisation">#1d269d</color>
+
+    <color name="colorGreenMenu">@color/colorPrimaryWhatsapp</color>
+    <color name="colorGreenPrimary1">#017036</color>
+    <color name="colorGreenPrimary2">#1A8856</color>
+    <color name="colorGreenMenuFocused">#05924E</color>
+
+    <color name="colorPrimaryWhatsapp">#075E54</color>
+    <color name="colorPrimaryDarkWhatsapp">#054D44</color>
+    <color name="colorAccentWhatsapp">#20C659</color>
+
+</resources>

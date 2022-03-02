@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/len_12"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <com.servo.apptendance.views.TextViewTeach
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/len_60"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDarkWhatsapp"
+            android:text="@string/matricule_titre"
+            android:textSize="@dimen/font_24"
+            android:drawableLeft="@drawable/ic_matricule_icone_zone"
+            android:drawablePadding="@dimen/len_4"
+            app:police="roboto_light"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <com.servo.apptendance.views.FancyButtonBK
+                android:layout_width="@dimen/len_60"
+                android:layout_height="@dimen/len_60"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="@dimen/len_8"
+                app:fb_borderColor="@color/colorBlueNormal"
+                app:fb_borderWidth="@dimen/len_1"
+                app:fb_radius="@dimen/len_60"
+                app:fb_defaultColor="@color/trans"
+                app:fb_focusColor="@color/colorBlueClickButton"
+                app:fb_textColor="@color/colorBlueNormal"
+                app:fb_text="@string/text_vide"
+                app:fb_iconPosition="left"
+                app:fb_iconResource="@drawable/ic_check_blue"
+                app:fb_iconPaddingBottom="@dimen/len_0"
+                app:fb_iconPaddingTop="@dimen/len_0"
+                app:fb_iconPaddingLeft="@dimen/len_0"
+                app:fb_iconPaddingRight="@dimen/len_0"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
