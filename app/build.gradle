@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.servo.apptendance"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        useLibrary 'org.apache.http.legacy'
+        renderscriptTargetApi 19
+        renderscriptSupportModeEnabled true
+        packagingOptions {
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/DEPENDENCIES'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+        jcenter()
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion "28.0.0"
+            }
+        }
+    }
+
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    
+    //For Resource and Graphic
+    implementation 'net.qiujuer.genius:ui:2.0.0'
+    implementation 'net.qiujuer.genius:res:2.0.0'
+    implementation 'net.qiujuer.genius:graphics:2.0.0'
+    //for apache network manager
+    implementation files('libs/httpmime-4.1.3.jar')
+    implementation 'commons-io:commons-io:2.6'
+    //For Animate view
+    implementation files('libs/easyanimation.jar')
+    //navigationTabbar menu gauche
+    implementation 'devlight.io:navigationtabbar:1.2.5'
+    //Vertical viewPager
+    implementation 'me.kaelaela:verticalviewpager:1.0.0@aar'
+    //for permission manager
+    implementation 'com.anthonycr.grant:permissions:1.0'
+    //Voley for requete
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+    //code Qr
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.journeyapps:zxing-android-embedded:3.3.0'
+    //TextDrawable
+    implementation 'com.github.apg-mobile:android-round-textview:v1.0.0'
+    //EditText
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    //RoundButton
+    implementation 'com.marozzi.roundbutton:round-button:1.0.7'
+}
